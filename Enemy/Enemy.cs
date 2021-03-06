@@ -9,7 +9,7 @@ public class Enemy : PathFollow2D
     {
         Offset += speed;
 
-        if (Offset >= 2750)
+        if (Offset >= 2730)
         {
             QueueFree();
             GD.Print("Enemy has gotten through");

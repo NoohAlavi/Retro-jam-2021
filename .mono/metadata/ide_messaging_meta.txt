@@ -1,2 +1,2 @@
-﻿65053
+﻿49180
 C:\Godot\bin\Godot.exe
