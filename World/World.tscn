@@ -47,10 +47,6 @@ _data = {
 script = ExtResource( 6 )
 enemyScene = ExtResource( 2 )
 
-[node name="GameCam" type="Camera2D" parent="."]
-position = Vector2( 512, 304 )
-current = true
-
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )
 tile_set = SubResource( 1 )

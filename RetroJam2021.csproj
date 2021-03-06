@@ -8,6 +8,5 @@
     <Content Include="Enemy\Enemy.cs" />
     <Content Include="World\World.cs" />
     <Content Include="Turret\Turret.cs" />
-    <Content Include="World\GameCam.cs" />
   </ItemGroup>
 </Project>
