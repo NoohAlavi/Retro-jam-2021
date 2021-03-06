@@ -68,7 +68,6 @@ curve = SubResource( 2 )
 
 [node name="Enemy" parent="Path2D" instance=ExtResource( 2 )]
 position = Vector2( -7.99962, -0.0778351 )
-rotation = 0.0444159
 
 [node name="Turrets" type="Node2D" parent="."]
 

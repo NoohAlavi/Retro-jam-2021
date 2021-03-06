@@ -20,16 +20,12 @@ extents = Vector2( 16, 16 )
 rotate = false
 loop = false
 script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 4, 4 )
-texture = ExtResource( 1 )
+speed = 1.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-frame = 1
+speed_scale = 0.5
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
