@@ -3,9 +3,7 @@
 [ext_resource path="res://Enemy/EndParticles.cs" type="Script" id=1]
 
 [node name="EndParticles" type="CPUParticles2D"]
-emitting = false
 amount = 10
-one_shot = true
 explosiveness = 1.0
 randomness = 1.0
 direction = Vector2( 0, 0 )

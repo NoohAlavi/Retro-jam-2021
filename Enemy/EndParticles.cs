@@ -4,7 +4,7 @@ public class EndParticles : CPUParticles2D
 {
     public override void _Ready()
     {
-        GetNode<Timer>("Timer").Connect("timeout", this, "OnTimeout()");
+        GetNode<Timer>("Timer").Connect("timeout", this, "OnTimeout");
         Emitting = true;
     }
 

@@ -5,10 +5,29 @@ public class Turret : Node2D
 
     public override void _Process(float delta)
     {
-        var enemies = GetTree().Root.GetNode<Node2D>("World/Path2D");
-        if (enemies.GetChildCount() > 0)
+
+        var enemies = GetTree().Root.GetNode<Node2D>("World/Path2D").GetChildren();
+        float distance = Mathf.Inf;
+        Enemy target = new Enemy();
+
+        if (enemies.Count > 0)
         {
-            Enemy target = enemies.GetChild<Enemy>(0);
+
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                if (Object.IsInstanceValid(enemies[i] as Enemy))
+                {
+                    Enemy enemy = enemies[i] as Enemy;
+                    var enemyDist = Position.DistanceTo(enemy.Position);
+
+                    distance = Mathf.Min(distance, enemyDist);
+
+                    if (enemyDist == distance)
+                    {   
+                        target = enemy;
+                    }
+                }
+            }
             LookAt(target.GlobalPosition);
         }
     }
