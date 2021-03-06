@@ -7,6 +7,11 @@ public class BuyTurret: Button
 	[Export]
 	public string turretName;
 
+	[Export]
+	public bool isEditMode = false;
+	[Export]
+	public PackedScene turretScene;
+
 	private UI uI;
 
     public override void _Ready()
@@ -28,6 +33,18 @@ public class BuyTurret: Button
 		}
     }
 
+    public override void _PhysicsProcess(float delta)
+    {
+        if (Input.IsActionJustPressed("PlaceTurret") && isEditMode)
+		{
+			Vector2 mousePos = GetGlobalMousePosition();
+			GD.Print("Placed Turret at " + mousePos.x + ", " + mousePos.y);
+			isEditMode = false;
+			SpawnTurret(mousePos);
+		}
+    }
+    
+
 	private void OnButtonPressed()
 	{
 		float money = uI.money;
@@ -37,5 +54,14 @@ public class BuyTurret: Button
 			GD.Print(turretName + " bought for $" + price + ", $" + money + " remaining");
 			uI.money = money;
 		}
+
+		isEditMode = true;
+	}
+
+	private void SpawnTurret(Vector2 pos)
+	{
+		Turret turret = turretScene.Instance() as Turret;
+		turret.Position = pos;
+		GetTree().Root.GetNode("World/Turrets").AddChild(turret);
 	}
 }
