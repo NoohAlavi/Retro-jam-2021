@@ -6,3 +6,11 @@ C:\Users\nooha\Documents\GitHub\RetroJam2021\.mono\temp\obj\Debug\RetroJam2021.A
 C:\Users\nooha\Documents\GitHub\RetroJam2021\.mono\temp\obj\Debug\RetroJam2021.csproj.CoreCompileInputs.cache
 C:\Users\nooha\Documents\GitHub\RetroJam2021\.mono\temp\obj\Debug\RetroJam2021.dll
 C:\Users\nooha\Documents\GitHub\RetroJam2021\.mono\temp\obj\Debug\RetroJam2021.pdb
+C:\Users\nooha\Documents\GitHub\RetroJam2021\Retro-jam-2021\.mono\temp\bin\Debug\RetroJam2021.dll
+C:\Users\nooha\Documents\GitHub\RetroJam2021\Retro-jam-2021\.mono\temp\bin\Debug\RetroJam2021.pdb
+C:\Users\nooha\Documents\GitHub\RetroJam2021\Retro-jam-2021\.mono\temp\obj\Debug\RetroJam2021.csprojAssemblyReference.cache
+C:\Users\nooha\Documents\GitHub\RetroJam2021\Retro-jam-2021\.mono\temp\obj\Debug\RetroJam2021.AssemblyInfoInputs.cache
+C:\Users\nooha\Documents\GitHub\RetroJam2021\Retro-jam-2021\.mono\temp\obj\Debug\RetroJam2021.AssemblyInfo.cs
+C:\Users\nooha\Documents\GitHub\RetroJam2021\Retro-jam-2021\.mono\temp\obj\Debug\RetroJam2021.csproj.CoreCompileInputs.cache
+C:\Users\nooha\Documents\GitHub\RetroJam2021\Retro-jam-2021\.mono\temp\obj\Debug\RetroJam2021.dll
+C:\Users\nooha\Documents\GitHub\RetroJam2021\Retro-jam-2021\.mono\temp\obj\Debug\RetroJam2021.pdb

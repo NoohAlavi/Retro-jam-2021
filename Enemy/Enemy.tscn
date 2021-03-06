@@ -20,7 +20,6 @@ extents = Vector2( 16, 16 )
 rotate = false
 loop = false
 script = ExtResource( 2 )
-speed = 1.0
 
 [node name="Sprite" type="Sprite" parent="."]
 visible = false

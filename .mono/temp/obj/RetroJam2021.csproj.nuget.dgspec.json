@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\RetroJam2021.csproj": {}
+    "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\Retro-jam-2021\\RetroJam2021.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\RetroJam2021.csproj": {
+    "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\Retro-jam-2021\\RetroJam2021.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\RetroJam2021.csproj",
+        "projectUniqueName": "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\Retro-jam-2021\\RetroJam2021.csproj",
         "projectName": "RetroJam2021",
-        "projectPath": "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\RetroJam2021.csproj",
+        "projectPath": "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\Retro-jam-2021\\RetroJam2021.csproj",
         "packagesPath": "C:\\Users\\nooha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\nooha\\Documents\\GitHub\\RetroJam2021\\Retro-jam-2021\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nooha\\AppData\\Roaming\\NuGet\\NuGet.Config"
