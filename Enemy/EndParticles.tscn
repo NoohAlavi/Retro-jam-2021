@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Enemy/EndParticles.cs" type="Script" id=1]
+
+[node name="EndParticles" type="CPUParticles2D"]
+emitting = false
+amount = 10
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+direction = Vector2( 0, 0 )
+spread = 128.23
+gravity = Vector2( 0, 0 )
+initial_velocity = 21.51
+initial_velocity_random = 1.0
+scale_amount = 1.5
+scale_amount_random = 1.0
+color = Color( 1, 0, 0, 1 )
+hue_variation = 1.0
+hue_variation_random = 0.1
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true

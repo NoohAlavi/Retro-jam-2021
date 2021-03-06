@@ -9,5 +9,6 @@
     <Content Include="World\World.cs" />
     <Content Include="Turret\Turret.cs" />
     <Content Include="UI\BuyTurret.cs" />
+    <Content Include="Enemy\EndParticles.cs" />
   </ItemGroup>
 </Project>
