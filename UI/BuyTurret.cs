@@ -12,7 +12,9 @@ public class BuyTurret: Button
     public override void _Ready()
     {
         Connect("pressed", this, "OnButtonPressed");
-		uI = GetParent().GetParent<UI>();
+		uI = GetParent().GetParent().GetParent<UI>();
+		Text = turretName + " ($" + price + ")";
+		
     }
 
     public override void _Process(float delta)

@@ -160,18 +160,26 @@ __meta__ = {
 [node name="Buttons" type="CanvasLayer" parent="."]
 layer = 4
 
-[node name="Button_1" type="Button" parent="Buttons"]
-margin_left = 24.0
-margin_top = 512.0
-margin_right = 136.0
-margin_bottom = 544.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons"]
+margin_top = 513.0
+margin_right = 512.0
+margin_bottom = 553.0
 rect_scale = Vector2( 2, 2 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_1" type="Button" parent="Buttons/HBoxContainer"]
+margin_left = 192.0
+margin_right = 254.0
+margin_bottom = 40.0
 custom_colors/font_color_disabled = Color( 0.537255, 0.537255, 0.537255, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.917647, 1, 0.341176, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.454902, 0.454902, 1 )
 keep_pressed_outside = true
-text = "Test Turret ($5)"
+text = "Turret 1"
 flat = true
 script = ExtResource( 4 )
 __meta__ = {
@@ -179,6 +187,19 @@ __meta__ = {
 }
 price = 5.0
 turretName = "Test Turret"
+
+[node name="Button_2" type="Button" parent="Buttons/HBoxContainer"]
+margin_left = 258.0
+margin_right = 320.0
+margin_bottom = 40.0
+text = "Turret 2"
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 10.0
+turretName = "Test Turret 2"
 
 [node name="595FAD8C-E33F-4E12-A974-9B2D043A2BA3pngeac9bd8cac80378692e4115553790af8" type="Sprite" parent="."]
 visible = false
