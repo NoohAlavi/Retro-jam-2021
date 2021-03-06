@@ -8,5 +8,6 @@
     <Content Include="Enemy\Enemy.cs" />
     <Content Include="World\World.cs" />
     <Content Include="Turret\Turret.cs" />
+    <Content Include="UI\BuyTurret.cs" />
   </ItemGroup>
 </Project>

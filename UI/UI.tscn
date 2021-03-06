@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/UI.cs" type="Script" id=1]
 [ext_resource path="res://UI/595FAD8C-E33F-4E12-A974-9B2D043A2BA3.png.eac9bd8cac80378692e4115553790af8.png" type="Texture" id=2]
 [ext_resource path="res://UI/CRT.shader" type="Shader" id=3]
+[ext_resource path="res://UI/BuyTurret.cs" type="Script" id=4]
 
 [sub_resource type="Shader" id=1]
 code = "/*
@@ -167,14 +168,17 @@ margin_bottom = 544.0
 rect_scale = Vector2( 2, 2 )
 custom_colors/font_color_disabled = Color( 0.537255, 0.537255, 0.537255, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0.952941, 1, 0.623529, 1 )
+custom_colors/font_color_hover = Color( 0.917647, 1, 0.341176, 1 )
 custom_colors/font_color_pressed = Color( 1, 0.454902, 0.454902, 1 )
 keep_pressed_outside = true
 text = "Test Turret ($5)"
 flat = true
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+price = 5.0
+turretName = "Test Turret"
 
 [node name="595FAD8C-E33F-4E12-A974-9B2D043A2BA3pngeac9bd8cac80378692e4115553790af8" type="Sprite" parent="."]
 visible = false
