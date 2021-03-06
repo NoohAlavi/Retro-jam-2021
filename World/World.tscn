@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://World/Tileset/path_tile.png" type="Texture" id=4]
 [ext_resource path="res://World/World_2.wav" type="AudioStream" id=5]
 [ext_resource path="res://World/World.cs" type="Script" id=6]
-[ext_resource path="res://Turret/Turret.tscn" type="PackedScene" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "grass_tile.png 0"
@@ -68,12 +67,6 @@ curve = SubResource( 2 )
 position = Vector2( 31.298, 72.3079 )
 
 [node name="Turrets" type="Node2D" parent="."]
-
-[node name="Turret" parent="Turrets" instance=ExtResource( 7 )]
-position = Vector2( 56, 128 )
-
-[node name="Turret2" parent="Turrets" instance=ExtResource( 7 )]
-position = Vector2( 376, 312 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

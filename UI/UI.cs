@@ -16,6 +16,11 @@ public class UI : Control
     public override void _Process(float delta)
     {
         coinLabel.Text = "Coins: $" + money;
+
+        if (Input.IsActionJustPressed("ToggleCRT"))
+        {
+            GetNode<ColorRect>("CRT").Visible = !GetNode<ColorRect>("CRT").Visible;
+        }
     }
 }
 

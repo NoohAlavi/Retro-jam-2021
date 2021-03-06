@@ -3,8 +3,14 @@ using Godot;
 public class Turret : Node2D
 {
 
+    [Export]
+    public int tier = 1;
+
     public override void _Process(float delta)
     {
+
+        GetNode<Sprite>(tier.ToString()).Show();
+
 
         var enemies = GetTree().Root.GetNode<Node2D>("World/Path2D").GetChildren();
         float distance = Mathf.Inf;

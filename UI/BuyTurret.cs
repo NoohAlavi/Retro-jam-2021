@@ -6,6 +6,8 @@ public class BuyTurret: Button
 	public float price;
 	[Export]
 	public string turretName;
+	[Export]
+	public int targetTier = 1;
 
 	[Export]
 	public bool isEditMode = false;
@@ -62,6 +64,7 @@ public class BuyTurret: Button
 	{
 		Turret turret = turretScene.Instance() as Turret;
 		turret.Position = pos;
+		turret.tier = targetTier;
 		GetTree().Root.GetNode("World/Turrets").AddChild(turret);
 	}
 }

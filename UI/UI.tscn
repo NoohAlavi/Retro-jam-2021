@@ -136,6 +136,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+money = 20.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_top = 511.0
@@ -187,7 +188,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 price = 5.0
-turretName = "Test Turret"
+turretName = "Basic Turret"
 turretScene = ExtResource( 5 )
 
 [node name="Button_2" type="Button" parent="Buttons/HBoxContainer"]
@@ -205,7 +206,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 price = 10.0
-turretName = "Test Turret 2"
+turretName = "Ultra Turret"
+targetTier = 2
 turretScene = ExtResource( 5 )
 
 [node name="595FAD8C-E33F-4E12-A974-9B2D043A2BA3pngeac9bd8cac80378692e4115553790af8" type="Sprite" parent="."]
