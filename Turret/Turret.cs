@@ -22,6 +22,8 @@ public class Turret : Area2D
         Connect("mouse_entered", this, "OnMouseEntered");
         Connect("mouse_exited", this, "OnMouseExited");
         shootTimer.Connect("timeout", this, "Shoot");
+
+        GD.Randomize();
     }
 
     public override void _Process(float delta)
@@ -73,6 +75,7 @@ public class Turret : Area2D
         Bullet bullet = bulletScene.Instance() as Bullet;
         bullet.Position = Position;
         bullet.direction = (target.Position - Position).Normalized();
+        bullet.direction.x += (float) GD.RandRange(-1f, 1f);
         GetTree().Root.GetNode("World/Bullets").AddChild(bullet);
     }
 
