@@ -26,6 +26,11 @@ public class UI : Control
         {
             GetNode<ColorRect>("CRT").Visible = !GetNode<ColorRect>("CRT").Visible;
         }
+
+        if (health <= 0f)
+        {
+            GetTree().ChangeScene("res://GameOver/GameOver.tscn");
+        }
     }
 }
 

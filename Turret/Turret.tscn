@@ -52,6 +52,8 @@ rotation = 1.57079
 scale = Vector2( 6, 6 )
 frames = SubResource( 3 )
 
+[node name="3" type="AnimatedSprite" parent="."]
+
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true

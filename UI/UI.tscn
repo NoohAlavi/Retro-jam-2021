@@ -215,7 +215,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-price = 5.0
+price = 10.0
 turretName = "Basic Turret"
 turretScene = ExtResource( 5 )
 
@@ -235,7 +235,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-price = 10.0
+price = 20.0
 turretName = "Ultra Turret"
 targetTier = 2
 turretScene = ExtResource( 5 )
@@ -256,9 +256,9 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-price = 30.0
+price = 50.0
 turretName = "One Shot Turret"
-targetTier = 2
+targetTier = 3
 turretScene = ExtResource( 5 )
 
 [node name="595FAD8C-E33F-4E12-A974-9B2D043A2BA3pngeac9bd8cac80378692e4115553790af8" type="Sprite" parent="."]
