@@ -42,26 +42,28 @@ public class BuyTurret: Button
 			Vector2 mousePos = GetGlobalMousePosition();
 			SpawnTurret(mousePos);
 		}
+
+		if (Input.IsActionJustPressed("CancelTurret") && isEditMode)
+		{
+			isEditMode = false;
+		}
     }
     
 
 	private void OnButtonPressed()
 	{
 		float money = uI.money;
-		if (money >= price)
+		if (money >= price && !isEditMode)
 		{
-			money -= price;
-			GD.Print(turretName + " bought for $" + price + ", $" + money + " remaining");
-			uI.money = money;
+			isEditMode = true;
 		}
-
-		isEditMode = true;
 	}
 
 	private void SpawnTurret(Vector2 pos)
 	{
 		Node turretsHolder = GetTree().Root.GetNode("World/Turrets");
 		var turrets = turretsHolder.GetChildren();
+		if (pos.y > 500f) return;
 		for (int i = 0; i < turrets.Count; i++)
 		{
 			if (pos.DistanceTo((turrets[i] as Turret).Position) < 100) 
@@ -72,6 +74,11 @@ public class BuyTurret: Button
 		turret.tier = targetTier;
 		turret.price = price;
 		turretsHolder.AddChild(turret);
+
+		float money = uI.money;
+		money -= price;
+		GD.Print(turretName + " bought for $" + price + ", $" + money + " remaining");
+		uI.money = money;
 
 		GD.Print("Placed Turret at " + pos.x + ", " + pos.y);
 		isEditMode = false;

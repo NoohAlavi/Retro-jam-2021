@@ -161,11 +161,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CoinsLabel2" type="Label" parent="."]
-margin_left = 840.0
-margin_top = 528.0
-margin_right = 921.0
-margin_bottom = 543.0
+[node name="HealthLabel" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 550.0
+margin_right = 105.0
+margin_bottom = 565.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.254902, 0.254902, 1 )
@@ -174,23 +174,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="EditMode" type="ColorRect" parent="."]
+visible = false
+margin_right = 1016.0
+margin_bottom = 504.0
+color = Color( 0.984314, 0.403922, 0.921569, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Buttons" type="CanvasLayer" parent="."]
 layer = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Buttons"]
-margin_top = 528.0
-margin_right = 512.0
-margin_bottom = 572.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 200.0
+margin_top = 520.0
+margin_right = 728.0
+margin_bottom = 563.0
+rect_scale = Vector2( 1.5, 1.5 )
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button_1" type="Button" parent="Buttons/HBoxContainer"]
-margin_left = 167.0
-margin_right = 254.0
-margin_bottom = 44.0
+margin_left = 129.0
+margin_right = 216.0
+margin_bottom = 43.0
 hint_tooltip = "The Basic Turret - Slow but Reliable! 
 Price: $5"
 custom_fonts/font = ExtResource( 6 )
@@ -210,9 +220,9 @@ turretName = "Basic Turret"
 turretScene = ExtResource( 5 )
 
 [node name="Button_2" type="Button" parent="Buttons/HBoxContainer"]
-margin_left = 258.0
-margin_right = 345.0
-margin_bottom = 44.0
+margin_left = 220.0
+margin_right = 307.0
+margin_bottom = 43.0
 hint_tooltip = "Ultra Turret - Way faster but less accurate!"
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_disabled = Color( 0.564706, 0.564706, 0.564706, 1 )
@@ -227,6 +237,27 @@ __meta__ = {
 }
 price = 10.0
 turretName = "Ultra Turret"
+targetTier = 2
+turretScene = ExtResource( 5 )
+
+[node name="Button_3" type="Button" parent="Buttons/HBoxContainer"]
+margin_left = 311.0
+margin_right = 398.0
+margin_bottom = 43.0
+hint_tooltip = "Ultra Turret - Way faster but less accurate!"
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color_disabled = Color( 0.564706, 0.564706, 0.564706, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 0.564706, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.498039, 0.498039, 1 )
+text = "Turret 2"
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 30.0
+turretName = "One Shot Turret"
 targetTier = 2
 turretScene = ExtResource( 5 )
 
