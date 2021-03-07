@@ -101,6 +101,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Fonts" type="LinkButton" parent="."]
+margin_left = 16.0
+margin_top = 408.0
+margin_right = 411.0
+margin_bottom = 448.0
+rect_scale = Vector2( 2.3, 2.3 )
+custom_fonts/font = ExtResource( 1 )
+text = "Fonts: minecraft and 3dVenture from dafont.com"
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="BackButton" type="Button" parent="."]
 margin_left = 48.0
 margin_top = 480.0

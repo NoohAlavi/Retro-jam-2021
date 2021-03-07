@@ -7,6 +7,7 @@ public class Credits : Control
         GetNode<LinkButton>("Nooh").Connect("pressed", this, "NoohSocials");
         GetNode<LinkButton>("Nash").Connect("pressed", this, "NashSocials");
         GetNode<LinkButton>("ShadersGithub").Connect("pressed", this, "ShadersGithub");
+        GetNode<LinkButton>("Fonts").Connect("pressed", this, "Fonts");
         GetNode<Button>("BackButton").Connect("pressed", this, "Back");
     }
 
@@ -28,6 +29,12 @@ public class Credits : Control
     private void ShadersGithub()
     {
         OS.ShellOpen("https://github.com/hiulit/Godot-3-2D-CRT-Shader/blob/master/crt_shader.shader");
+    }
+
+    private void Fonts()
+    {
+        OS.ShellOpen("https://www.dafont.com/minecraft.font");
+        OS.ShellOpen("https://www.dafont.com/3dventure.font");
     }
 
     private void Back()
