@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/3dventure/3dventure.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Credits/Credits.cs" type="Script" id=2]
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Credits" type="Label" parent="."]
+margin_left = 312.0
+margin_right = 1336.0
+margin_bottom = 600.0
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = ExtResource( 1 )
+text = "Credits
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nooh" type="LinkButton" parent="."]
+margin_left = 32.0
+margin_top = 96.0
+margin_right = 904.0
+margin_bottom = 144.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "Nooh / Opsci - Programming, Art"
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nash" type="LinkButton" parent="."]
+margin_left = 32.0
+margin_top = 160.0
+margin_right = 904.0
+margin_bottom = 208.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "Prod. Nishy - Music"
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

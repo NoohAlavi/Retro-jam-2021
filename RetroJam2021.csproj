@@ -11,5 +11,6 @@
     <Content Include="UI\BuyTurret.cs" />
     <Content Include="Enemy\EndParticles.cs" />
     <Content Include="Bullet\Bullet.cs" />
+    <Content Include="Credits\Credits.cs" />
   </ItemGroup>
 </Project>

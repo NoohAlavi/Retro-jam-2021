@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/UI.cs" type="Script" id=1]
 [ext_resource path="res://UI/595FAD8C-E33F-4E12-A974-9B2D043A2BA3.png.eac9bd8cac80378692e4115553790af8.png" type="Texture" id=2]
 [ext_resource path="res://UI/CRT.shader" type="Shader" id=3]
 [ext_resource path="res://UI/BuyTurret.cs" type="Script" id=4]
 [ext_resource path="res://Turret/Turret.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/3dventure/3dventure.tres" type="DynamicFont" id=6]
 
 [sub_resource type="Shader" id=1]
 code = "/*
@@ -153,6 +154,7 @@ margin_top = 520.0
 margin_right = 890.0
 margin_bottom = 534.0
 rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.909804, 0, 1 )
 text = "Coins: $x"
 __meta__ = {
@@ -173,9 +175,12 @@ __meta__ = {
 }
 
 [node name="Button_1" type="Button" parent="Buttons/HBoxContainer"]
-margin_left = 192.0
+margin_left = 167.0
 margin_right = 254.0
 margin_bottom = 40.0
+hint_tooltip = "The Basic Turret - Slow but Reliable! 
+Price: $5"
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_disabled = Color( 0.564706, 0.564706, 0.564706, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 0.564706, 1 )
@@ -193,8 +198,10 @@ turretScene = ExtResource( 5 )
 
 [node name="Button_2" type="Button" parent="Buttons/HBoxContainer"]
 margin_left = 258.0
-margin_right = 320.0
+margin_right = 345.0
 margin_bottom = 40.0
+hint_tooltip = "Ultra Turret - Way faster but less accurate!"
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_disabled = Color( 0.564706, 0.564706, 0.564706, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 0.564706, 1 )

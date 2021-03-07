@@ -75,8 +75,15 @@ public class Turret : Area2D
         Bullet bullet = bulletScene.Instance() as Bullet;
         bullet.Position = Position;
         bullet.direction = (target.Position - Position).Normalized();
-        bullet.direction.x += (float) GD.RandRange(-1f, 1f);
         GetTree().Root.GetNode("World/Bullets").AddChild(bullet);
+
+        switch (tier)
+        {
+            case 2: 
+                bullet.speed *= 1.5f;
+                bullet.accuracy = new Vector2(-1.5f, 1.5f);
+                break;
+        }
     }
 
     private void OnMouseEntered()
