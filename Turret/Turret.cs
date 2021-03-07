@@ -7,13 +7,19 @@ public class Turret : Area2D
     public int tier = 1;
     [Export]
     public PackedScene bulletScene;
+    [Export]
+    public float price;
 
     private Timer shootTimer;
     private Enemy target = new Enemy();
 
+    private bool mouseHover = false;
+
     public override void _Ready()
     {
         shootTimer = GetNode<Timer>("ShootTimer");
+        Connect("mouse_entered", this, "OnMouseEntered");
+        Connect("mouse_exited", this, "OnMouseExited");
 
         shootTimer.Connect("timeout", this, "Shoot");
     }
@@ -48,6 +54,15 @@ public class Turret : Area2D
         }
     }
 
+    public override void _PhysicsProcess(float delta)
+    {
+        if (Input.IsActionJustPressed("RemoveTurret") && mouseHover)
+        {
+            QueueFree();
+            GetTree().Root.GetNode<UI>("World/UILayer/UI").money += Mathf.Floor(price / 2);
+        }
+    }
+
     private void Shoot()
     {
         if (!Object.IsInstanceValid(target)) return;
@@ -56,5 +71,15 @@ public class Turret : Area2D
         bullet.Position = Position;
         bullet.direction = (target.Position - Position).Normalized();
         GetTree().Root.GetNode("World/Bullets").AddChild(bullet);
+    }
+
+    private void OnMouseEntered()
+    {
+        mouseHover = true;
+    }
+
+    private void OnMouseExited()
+    {
+        mouseHover = false;
     }
 }

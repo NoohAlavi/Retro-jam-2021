@@ -70,6 +70,7 @@ public class BuyTurret: Button
 		Turret turret = turretScene.Instance() as Turret;
 		turret.Position = pos;
 		turret.tier = targetTier;
+		turret.price = price;
 		turretsHolder.AddChild(turret);
 
 		GD.Print("Placed Turret at " + pos.x + ", " + pos.y);
