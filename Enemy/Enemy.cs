@@ -5,8 +5,15 @@ public class Enemy : PathFollow2D
 
     [Export] public float speed = 1f;
     [Export]
-    public float health = 2f;
+    public int health = 2;
     [Export] public PackedScene endParticlesScn;
+
+    private AnimatedSprite anim;
+
+    public override void _Ready()
+    {
+        anim = GetNode<AnimatedSprite>("AnimatedSprite");
+    }
 
     public override void _PhysicsProcess(float delta)
     {
@@ -20,7 +27,16 @@ public class Enemy : PathFollow2D
             QueueFree();
         }
 
-        if (health <= 0f)
+
+        if (health == 2)
+        {
+            anim.Animation = "red";
+        }
+        if (health == 1)
+        {
+            anim.Animation = "blue";
+        }
+        if (health <= 0)
         {
             QueueFree();
         }

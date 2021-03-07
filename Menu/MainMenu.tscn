@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/CRT.shader" type="Shader" id=1]
+[ext_resource path="res://UI/minecraft/Minecraft.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/3dventure/3dventure.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Menu/MainMenu.cs" type="Script" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
@@ -20,9 +23,13 @@ shader_param/vertical_scan_lines_opacity = 1.0
 shader_param/boost = 1.2
 shader_param/aberration_amount = 0.0
 
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -31,6 +38,43 @@ __meta__ = {
 material = SubResource( 1 )
 margin_right = 1024.0
 margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_top = 56.0
+margin_right = 256.0
+margin_bottom = 72.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 2 )
+text = "dont have a title yet so
+imma just put this here
+k thx bye
+- the dev
+"
+align = 1
+valign = 1
+
+[node name="Play" type="Button" parent="."]
+margin_left = 72.0
+margin_top = 384.0
+margin_right = 124.0
+margin_bottom = 405.0
+rect_scale = Vector2( 7, 7 )
+custom_fonts/font = ExtResource( 3 )
+text = "Play"
+flat = true
+
+[node name="Credits" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 384.0
+margin_right = 514.0
+margin_bottom = 405.0
+rect_scale = Vector2( 7, 7 )
+custom_fonts/font = ExtResource( 3 )
+text = "Credits"
+flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

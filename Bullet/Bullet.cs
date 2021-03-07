@@ -8,7 +8,7 @@ public class Bullet : Area2D
     [Export]
     public Vector2 direction;
     [Export]
-    public float damage = 1f;
+    public int damage = 1;
     [Export]
     public Vector2 accuracy = new Vector2(-1, 1);
 
