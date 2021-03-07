@@ -8,7 +8,7 @@
 [ext_resource path="res://Menu/Bg 2.png" type="Texture" id=6]
 [ext_resource path="res://Menu/menu_theme.wav" type="AudioStream" id=7]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
@@ -16,7 +16,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="ShaderMaterial" id=1]
+[sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 1 )
 shader_param/screen_size = Vector2( 320, 180 )
 shader_param/show_curvature = true
@@ -34,7 +34,7 @@ shader_param/vertical_scan_lines_opacity = 1.0
 shader_param/boost = 1.2
 shader_param/aberration_amount = 0.0
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 2 )
 
 [node name="MainMenu" type="Control"]
@@ -48,12 +48,12 @@ __meta__ = {
 [node name="Bg" type="AnimatedSprite" parent="."]
 position = Vector2( 512, 304 )
 scale = Vector2( 32, 32.8889 )
-frames = SubResource( 3 )
-frame = 4
+frames = SubResource( 1 )
+frame = 5
 playing = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource( 1 )
+material = SubResource( 2 )
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.262745, 0.262745, 0.262745, 1 )
@@ -66,7 +66,7 @@ margin_top = 64.0
 margin_right = 256.0
 margin_bottom = 80.0
 rect_scale = Vector2( 4, 4 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "TOWER DEFENDERS"
 align = 1
 valign = 1
@@ -80,7 +80,7 @@ margin_top = 528.0
 margin_right = 448.0
 margin_bottom = 563.0
 rect_scale = Vector2( 2, 2 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Made by Nooh And Nash for the Retro Game Jam 2021"
 align = 1
 valign = 1

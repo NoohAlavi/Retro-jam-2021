@@ -82,7 +82,12 @@ public class Turret : Area2D
         {
             case 2: 
                 bullet.speed *= 1.5f;
-                bullet.accuracy = new Vector2(-1.5f, 1.5f);
+                bullet.accuracy = new Vector2(-1f, 1f);
+                break;
+            case 3:
+                bullet.speed *= 1.5f;
+                bullet.damage = 3;
+                bullet.accuracy = Vector2.Zero;
                 break;
         }
 
