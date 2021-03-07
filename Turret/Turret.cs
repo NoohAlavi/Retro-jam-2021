@@ -24,6 +24,16 @@ public class Turret : Area2D
         shootTimer.Connect("timeout", this, "Shoot");
         GetNode<Timer>("AnimTimer").Connect("timeout", this, "ResetAnim");
 
+        switch (tier)
+        {
+            case 2:
+                shootTimer.WaitTime = 1f;
+                break;
+            case 3:
+                shootTimer.WaitTime = 7f;
+                break;
+        }
+
         GD.Randomize();
     }
 
