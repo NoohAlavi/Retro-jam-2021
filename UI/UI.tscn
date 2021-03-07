@@ -149,10 +149,10 @@ __meta__ = {
 }
 
 [node name="CoinsLabel" type="Label" parent="."]
-margin_left = 832.0
+margin_left = 24.0
 margin_top = 520.0
-margin_right = 890.0
-margin_bottom = 534.0
+margin_right = 105.0
+margin_bottom = 535.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 1, 0.909804, 0, 1 )
@@ -161,13 +161,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CoinsLabel2" type="Label" parent="."]
+margin_left = 840.0
+margin_top = 528.0
+margin_right = 921.0
+margin_bottom = 543.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 0.254902, 0.254902, 1 )
+text = "HP: x/100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Buttons" type="CanvasLayer" parent="."]
 layer = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Buttons"]
-margin_top = 513.0
+margin_top = 528.0
 margin_right = 512.0
-margin_bottom = 553.0
+margin_bottom = 572.0
 rect_scale = Vector2( 2, 2 )
 alignment = 1
 __meta__ = {
@@ -177,7 +190,7 @@ __meta__ = {
 [node name="Button_1" type="Button" parent="Buttons/HBoxContainer"]
 margin_left = 167.0
 margin_right = 254.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 hint_tooltip = "The Basic Turret - Slow but Reliable! 
 Price: $5"
 custom_fonts/font = ExtResource( 6 )
@@ -199,7 +212,7 @@ turretScene = ExtResource( 5 )
 [node name="Button_2" type="Button" parent="Buttons/HBoxContainer"]
 margin_left = 258.0
 margin_right = 345.0
-margin_bottom = 40.0
+margin_bottom = 44.0
 hint_tooltip = "Ultra Turret - Way faster but less accurate!"
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_disabled = Color( 0.564706, 0.564706, 0.564706, 1 )

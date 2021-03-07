@@ -31,6 +31,7 @@ public class Bullet : Area2D
         if (area.GetParent() is Enemy)
         {
             area.GetParent<Enemy>().health -= damage;
+            GetTree().Root.GetNode<UI>("World/UILayer/UI").money++;
             QueueFree();
         }
     }

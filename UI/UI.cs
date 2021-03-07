@@ -6,6 +6,8 @@ public class UI : Control
 
     [Export]
     public float money = 15; 
+    [Export]
+    public float health = 100f;
 
     public override void _Ready()
     {
