@@ -68,6 +68,8 @@ position = Vector2( 31.298, 72.3079 )
 
 [node name="Turrets" type="Node2D" parent="."]
 
+[node name="Bullets" type="Node2D" parent="."]
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = -15.0

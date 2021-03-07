@@ -40,8 +40,6 @@ public class BuyTurret: Button
         if (Input.IsActionJustPressed("PlaceTurret") && isEditMode)
 		{
 			Vector2 mousePos = GetGlobalMousePosition();
-			GD.Print("Placed Turret at " + mousePos.x + ", " + mousePos.y);
-			isEditMode = false;
 			SpawnTurret(mousePos);
 		}
     }
@@ -62,9 +60,19 @@ public class BuyTurret: Button
 
 	private void SpawnTurret(Vector2 pos)
 	{
+		Node turretsHolder = GetTree().Root.GetNode("World/Turrets");
+		var turrets = turretsHolder.GetChildren();
+		for (int i = 0; i < turrets.Count; i++)
+		{
+			if (pos.DistanceTo((turrets[i] as Turret).Position) < 100) 
+				return;
+		}
 		Turret turret = turretScene.Instance() as Turret;
 		turret.Position = pos;
 		turret.tier = targetTier;
-		GetTree().Root.GetNode("World/Turrets").AddChild(turret);
+		turretsHolder.AddChild(turret);
+
+		GD.Print("Placed Turret at " + pos.x + ", " + pos.y);
+		isEditMode = false;
 	}
 }
