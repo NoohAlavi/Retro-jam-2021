@@ -1,21 +1,29 @@
 using Godot;
-using System;
 
 public class Bullet : Area2D
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
 
-    // Called when the node enters the scene tree for the first time.
+    [Export]
+    public float speed = 3;
+    [Export]
+    public Vector2 direction;
+
     public override void _Ready()
     {
-        
+        Connect("area_entered", this, "OnAreaEntered");
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    public override void _PhysicsProcess(float delta)
+    {
+        Position += direction * speed;
+    }
+
+    private void OnAreaEntered(Area area) 
+    {
+        if (area.GetParent() is Enemy)
+        {
+            area.GetParent().QueueFree();
+            QueueFree();
+        }
+    }
 }
