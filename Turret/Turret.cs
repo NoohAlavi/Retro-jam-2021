@@ -18,9 +18,9 @@ public class Turret : Area2D
     public override void _Ready()
     {
         shootTimer = GetNode<Timer>("ShootTimer");
+
         Connect("mouse_entered", this, "OnMouseEntered");
         Connect("mouse_exited", this, "OnMouseExited");
-
         shootTimer.Connect("timeout", this, "Shoot");
     }
 
@@ -52,12 +52,15 @@ public class Turret : Area2D
             }
             LookAt(target.GlobalPosition);
         }
+
+        // GD.Print(Name + " Is Mouse Hovering: " + mouseHover);
     }
 
     public override void _PhysicsProcess(float delta)
     {
         if (Input.IsActionJustPressed("RemoveTurret") && mouseHover)
         {
+            GD.Print("Remove Turret Pressed");
             QueueFree();
             GetTree().Root.GetNode<UI>("World/UILayer/UI").money += Mathf.Floor(price / 2);
         }
@@ -75,11 +78,13 @@ public class Turret : Area2D
 
     private void OnMouseEntered()
     {
+        GD.Print("Mouse Entered! " + mouseHover);
         mouseHover = true;
     }
 
     private void OnMouseExited()
     {
+        GD.Print("Mouse Exited! " + mouseHover);
         mouseHover = false;
     }
 }

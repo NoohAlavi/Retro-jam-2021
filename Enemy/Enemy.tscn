@@ -21,12 +21,12 @@ extents = Vector2( 16, 16 )
 rotate = false
 loop = false
 script = ExtResource( 2 )
+speed = 2.0
 endParticlesScn = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-frame = 1
 speed_scale = 0.5
 playing = true
 
