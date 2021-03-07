@@ -15,6 +15,7 @@ public class Bullet : Area2D
     public override void _Ready()
     {
         Connect("area_entered", this, "OnAreaEntered");
+        GetNode<Timer>("DespawnTimer").Connect("timeout", this, "Despawn");
         GD.Randomize();
 
         direction.x += (float) GD.RandRange(accuracy.x, accuracy.y);
@@ -32,5 +33,10 @@ public class Bullet : Area2D
             area.GetParent<Enemy>().health -= damage;
             QueueFree();
         }
+    }
+
+    private void Despawn()
+    {
+        QueueFree();
     }
 }

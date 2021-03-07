@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://UI/3dventure/3dventure.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Credits/Credits.cs" type="Script" id=2]
 [ext_resource path="res://UI/CRT.shader" type="Shader" id=3]
+[ext_resource path="res://UI/minecraft/Minecraft.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 3 )
@@ -21,6 +22,9 @@ shader_param/vertical_scan_lines_amount = 320.0
 shader_param/vertical_scan_lines_opacity = 1.0
 shader_param/boost = 1.2
 shader_param/aberration_amount = 0.0
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 4 )
 
 [node name="Credits" type="Control"]
 anchor_right = 1.0
@@ -65,7 +69,7 @@ margin_right = 904.0
 margin_bottom = 144.0
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = ExtResource( 1 )
-text = "Nooh / Opsci - Programming, Art"
+text = "Nooh Alavi - Programming, Art"
 underline = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -83,3 +87,28 @@ underline = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ShadersGithub" type="LinkButton" parent="."]
+margin_left = 16.0
+margin_top = 320.0
+margin_right = 411.0
+margin_bottom = 360.0
+rect_scale = Vector2( 2.5, 2.5 )
+custom_fonts/font = ExtResource( 1 )
+text = "CRT Shader downloaded from hiulit's Github"
+underline = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 48.0
+margin_top = 480.0
+margin_right = 118.0
+margin_bottom = 502.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_hover = Color( 0.411765, 1, 0.462745, 1 )
+custom_colors/font_color_pressed = Color( 0.964706, 0.870588, 0.109804, 1 )
+text = "<- Back"
+flat = true

@@ -12,5 +12,6 @@
     <Content Include="Enemy\EndParticles.cs" />
     <Content Include="Bullet\Bullet.cs" />
     <Content Include="Credits\Credits.cs" />
+    <Content Include="Menu\MainMenu.cs" />
   </ItemGroup>
 </Project>

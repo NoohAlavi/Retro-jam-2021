@@ -22,6 +22,7 @@ public class Turret : Area2D
         Connect("mouse_entered", this, "OnMouseEntered");
         Connect("mouse_exited", this, "OnMouseExited");
         shootTimer.Connect("timeout", this, "Shoot");
+        GetNode<Timer>("AnimTimer").Connect("timeout", this, "ResetAnim");
 
         GD.Randomize();
     }
@@ -29,7 +30,7 @@ public class Turret : Area2D
     public override void _Process(float delta)
     {
 
-        GetNode<Sprite>(tier.ToString()).Show();
+        GetNode<AnimatedSprite>(tier.ToString()).Show();
 
         var enemies = GetTree().Root.GetNode<Node2D>("World/Path2D").GetChildren();
         float distance = Mathf.Inf;
@@ -84,6 +85,14 @@ public class Turret : Area2D
                 bullet.accuracy = new Vector2(-1.5f, 1.5f);
                 break;
         }
+
+        GetNode<AnimatedSprite>(tier.ToString()).Animation = "shoot";
+        GetNode<Timer>("AnimTimer").Start();
+    }
+
+    private void ResetAnim()
+    {
+        GetNode<AnimatedSprite>(tier.ToString()).Animation = "default";
     }
 
     private void OnMouseEntered()

@@ -6,6 +6,8 @@ public class Credits : Control
     {
         GetNode<LinkButton>("Nooh").Connect("pressed", this, "NoohSocials");
         GetNode<LinkButton>("Nash").Connect("pressed", this, "NashSocials");
+        GetNode<LinkButton>("ShadersGithub").Connect("pressed", this, "ShadersGithub");
+        GetNode<Button>("BackButton").Connect("pressed", this, "Back");
     }
 
     private void NoohSocials()
@@ -21,5 +23,15 @@ public class Credits : Control
         OS.ShellOpen("https://soundcloud.com/prodnishy");
         OS.ShellOpen("https://twitch.tv/prodnishy");
         OS.ShellOpen("https://www.youtube.com/channel/UCATENuBKkVByd3tiJsCYw1A");
+    }
+
+    private void ShadersGithub()
+    {
+        OS.ShellOpen("https://github.com/hiulit/Godot-3-2D-CRT-Shader/blob/master/crt_shader.shader");
+    }
+
+    private void Back()
+    {
+        GetTree().ChangeScene("res://Menu/MainMenu.tscn");
     }
 }

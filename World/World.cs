@@ -18,7 +18,7 @@ public class World : Node2D
     private void spawnEnemies()
     {
         Enemy enemy = enemyScene.Instance() as Enemy;
-        enemy.health = (int) Mathf.Round(GD.Randf() * 1f + 1f);
+        enemy.health = (int) Mathf.Round(GD.Randf() * 2f + 1f);
         GetNode<Path2D>("Path2D").AddChild(enemy);
     }
 }

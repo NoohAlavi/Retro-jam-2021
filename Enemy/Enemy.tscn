@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Enemy/Sprites/Enemy_0.png" type="Texture" id=1]
 [ext_resource path="res://Enemy/Enemy.cs" type="Script" id=2]
@@ -8,12 +8,20 @@
 [ext_resource path="res://Enemy/Sprites/Enemy_0 blue.png" type="Texture" id=6]
 [ext_resource path="res://Enemy/Sprites/Enemy_1 blue.png" type="Texture" id=7]
 [ext_resource path="res://Enemy/Sprites/Enemy_2 blue.png" type="Texture" id=8]
+[ext_resource path="res://Enemy/Sprites/Enemy_0 green.png" type="Texture" id=9]
+[ext_resource path="res://Enemy/Sprites/Enemy_2 green.png" type="Texture" id=10]
+[ext_resource path="res://Enemy/Sprites/Enemy_1 green.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "blue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "green",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
@@ -35,7 +43,7 @@ endParticlesScn = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-animation = "red"
+animation = "green"
 frame = 2
 speed_scale = 0.5
 playing = true

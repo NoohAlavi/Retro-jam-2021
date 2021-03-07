@@ -28,6 +28,10 @@ public class Enemy : PathFollow2D
         }
 
 
+        if (health == 3)
+        {
+            anim.Animation = "green";
+        }
         if (health == 2)
         {
             anim.Animation = "red";
