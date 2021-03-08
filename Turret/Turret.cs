@@ -30,7 +30,7 @@ public class Turret : Area2D
                 shootTimer.WaitTime = 1f;
                 break;
             case 3:
-                shootTimer.WaitTime = 7f;
+                shootTimer.WaitTime = 10f;
                 break;
         }
 
@@ -92,7 +92,7 @@ public class Turret : Area2D
         {
             case 2: 
                 bullet.speed *= 1.5f;
-                bullet.accuracy = new Vector2(-1f, 1f);
+                bullet.accuracy = new Vector2(-1.25f, 1.25f);
                 break;
             case 3:
                 bullet.speed *= 2f;

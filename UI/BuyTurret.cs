@@ -28,19 +28,11 @@ public class BuyTurret: Button
 
     public override void _Process(float delta)
     {
-        if (uI.money < price)
-		{
-			Disabled = true;
-		} else
-		{
-			Disabled = false;
-		}
+        Disabled =  (uI.money < price);
 
 		if (isEditMode)
 		{
 			Input.SetCustomMouseCursor(mouseCursor);
-		} else {
-			Input.SetCustomMouseCursor(null, Input.CursorShape.PointingHand);
 		}
     }
 
@@ -55,6 +47,7 @@ public class BuyTurret: Button
 		if (Input.IsActionJustPressed("CancelTurret") && isEditMode)
 		{
 			isEditMode = false;
+			Input.SetCustomMouseCursor(null, Input.CursorShape.Arrow);
 		}
     }
     
@@ -91,5 +84,6 @@ public class BuyTurret: Button
 
 		GD.Print("Placed Turret at " + pos.x + ", " + pos.y);
 		isEditMode = false;
+		Input.SetCustomMouseCursor(null, Input.CursorShape.Arrow);
 	}
 }
