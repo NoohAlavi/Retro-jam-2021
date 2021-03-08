@@ -10,7 +10,7 @@ public class Bullet : Area2D
     [Export]
     public int damage = 1;
     [Export]
-    public Vector2 accuracy = new Vector2(-.5f, .5f);
+    public Vector2 accuracy = new Vector2(-.25f, .25f);
 
     public override void _Ready()
     {

@@ -8,7 +8,7 @@ public class UI : Control
     [Export]
     public float money = 15; 
     [Export]
-    public float health = 100f;
+    public float health = 500f;
 
     public override void _Ready()
     {
@@ -20,7 +20,7 @@ public class UI : Control
     public override void _Process(float delta)
     {
         coinLabel.Text = "Coins: $" + money;
-        hpLabel.Text = "Health: " + health + "%";
+        hpLabel.Text = "Health: " + (health / 500f) * 100f  + "%";
 
         if (Input.IsActionJustPressed("ToggleCRT"))
         {
