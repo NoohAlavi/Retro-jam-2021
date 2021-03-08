@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://UI/UI.cs" type="Script" id=1]
 [ext_resource path="res://GameOver/GameOver.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://UI/minecraft/minecraft.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Turret/turret_1_cursor.png" type="Texture" id=8]
 [ext_resource path="res://Turret/Turret_2_cursor.png" type="Texture" id=9]
+[ext_resource path="res://UI/f2b28f6e82f8cc3.png" type="Texture" id=10]
 
 [sub_resource type="Shader" id=1]
 code = "/*
@@ -150,6 +151,11 @@ color = Color( 0, 0.505882, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="f2b28f6e82f8cc3" type="Sprite" parent="ColorRect"]
+position = Vector2( 512, 44.5 )
+scale = Vector2( 0.842105, 0.071546 )
+texture = ExtResource( 10 )
 
 [node name="CoinsLabel" type="Label" parent="."]
 margin_left = 24.0
