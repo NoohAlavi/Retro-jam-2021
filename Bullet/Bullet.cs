@@ -35,10 +35,10 @@ public class Bullet : Area2D
             area.GetParent<Enemy>().health -= damage;
             GetTree().Root.GetNode<UI>("World/UILayer/UI").money++;
             
-            if (GD.Randf() >= 0.95)
-            {
-                shooter.QueueFree();
-            }
+            // if (GD.Randf() >= 0.95)
+            // {
+            //     shooter.QueueFree();
+            // }
             
             QueueFree();
         }
