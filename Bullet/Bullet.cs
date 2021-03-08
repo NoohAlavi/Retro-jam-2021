@@ -12,6 +12,8 @@ public class Bullet : Area2D
     [Export]
     public Vector2 accuracy = new Vector2(-.25f, .25f);
 
+    public Turret shooter;
+
     public override void _Ready()
     {
         Connect("area_entered", this, "OnAreaEntered");
@@ -32,6 +34,12 @@ public class Bullet : Area2D
         {
             area.GetParent<Enemy>().health -= damage;
             GetTree().Root.GetNode<UI>("World/UILayer/UI").money++;
+            
+            if (GD.Randf() >= 0.95)
+            {
+                shooter.QueueFree();
+            }
+            
             QueueFree();
         }
     }

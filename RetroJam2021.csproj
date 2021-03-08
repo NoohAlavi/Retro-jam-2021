@@ -14,5 +14,6 @@
     <Content Include="Credits\Credits.cs" />
     <Content Include="Menu\MainMenu.cs" />
     <Content Include="GameOver\GameOver.cs" />
+    <Content Include="Turret\Turret_1_cursor.png.import" />
   </ItemGroup>
 </Project>

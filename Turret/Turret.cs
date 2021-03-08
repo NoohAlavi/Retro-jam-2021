@@ -86,6 +86,7 @@ public class Turret : Area2D
         Bullet bullet = bulletScene.Instance() as Bullet;
         bullet.Position = Position;
         bullet.direction = (target.Position - Position).Normalized();
+        bullet.shooter = this;
         GetTree().Root.GetNode("World/Bullets").AddChild(bullet);
 
         switch (tier)
