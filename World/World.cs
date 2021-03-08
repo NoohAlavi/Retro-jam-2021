@@ -19,7 +19,10 @@ public class World : Node2D
     {
         if (GetNode<Path2D>("Path2D").GetChildren().Count == 0f)
         {
-            spawnEnemies();
+            for (int i = 0; i < 10; i++)
+            {
+                spawnEnemies();
+            }
         }
     }
 

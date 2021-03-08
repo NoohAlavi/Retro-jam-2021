@@ -13,5 +13,6 @@
     <Content Include="Bullet\Bullet.cs" />
     <Content Include="Credits\Credits.cs" />
     <Content Include="Menu\MainMenu.cs" />
+    <Content Include="GameOver\GameOver.cs" />
   </ItemGroup>
 </Project>

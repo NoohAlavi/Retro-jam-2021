@@ -13,6 +13,8 @@ public class BuyTurret: Button
 	public bool isEditMode = false;
 	[Export]
 	public PackedScene turretScene;
+	[Export]
+	public Texture mouseCursor;
 
 	private UI uI;
 
@@ -20,7 +22,7 @@ public class BuyTurret: Button
     {
         Connect("pressed", this, "OnButtonPressed");
 		uI = GetParent().GetParent().GetParent<UI>();
-		Text = turretName + " ($" + price + ")";
+		Text = turretName + " [$" + price + "]";
 		
     }
 
@@ -32,6 +34,13 @@ public class BuyTurret: Button
 		} else
 		{
 			Disabled = false;
+		}
+
+		if (isEditMode)
+		{
+			Input.SetCustomMouseCursor(mouseCursor);
+		} else {
+			Input.SetCustomMouseCursor(null, Input.CursorShape.PointingHand);
 		}
     }
 

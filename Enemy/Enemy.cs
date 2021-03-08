@@ -23,8 +23,8 @@ public class Enemy : PathFollow2D
         {
             EndParticles endParticles = endParticlesScn.Instance() as EndParticles;
             GetParent().AddChild(endParticles);
-            GD.Print("Enemy has gotten through");
             GetTree().Root.GetNode<UI>("World/UILayer/UI").health -= (health * 5f);
+            GD.Print("Enemy has gotten through, " + (health/500f) * 100f + " health remaining");
             QueueFree();
         }
 

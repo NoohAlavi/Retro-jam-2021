@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://UI/UI.cs" type="Script" id=1]
-[ext_resource path="res://UI/595FAD8C-E33F-4E12-A974-9B2D043A2BA3.png.eac9bd8cac80378692e4115553790af8.png" type="Texture" id=2]
+[ext_resource path="res://GameOver/GameOver.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/CRT.shader" type="Shader" id=3]
 [ext_resource path="res://UI/BuyTurret.cs" type="Script" id=4]
 [ext_resource path="res://Turret/Turret.tscn" type="PackedScene" id=5]
-[ext_resource path="res://UI/3dventure/3dventure.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Turret/Turret_0_cursor.png" type="Texture" id=6]
 [ext_resource path="res://UI/minecraft/minecraft.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Turret/Turret_1.png" type="Texture" id=8]
+[ext_resource path="res://Turret/Turret_2.png" type="Texture" id=9]
 
 [sub_resource type="Shader" id=1]
 code = "/*
@@ -199,12 +201,12 @@ __meta__ = {
 }
 
 [node name="Button_1" type="Button" parent="Buttons/HBoxContainer"]
-margin_left = 140.0
-margin_right = 227.0
+margin_left = 156.0
+margin_right = 231.0
 margin_bottom = 58.0
 hint_tooltip = "The Basic Turret - Slow but Reliable! 
 Price: $5"
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_disabled = Color( 0.564706, 0.564706, 0.564706, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 0.564706, 1 )
@@ -219,13 +221,15 @@ __meta__ = {
 price = 10.0
 turretName = "Basic Turret"
 turretScene = ExtResource( 5 )
+mouseCursor = ExtResource( 6 )
 
 [node name="Button_2" type="Button" parent="Buttons/HBoxContainer"]
-margin_left = 231.0
-margin_right = 318.0
+margin_left = 235.0
+margin_right = 312.0
 margin_bottom = 58.0
-hint_tooltip = "Ultra Turret - Way faster but less accurate!"
-custom_fonts/font = ExtResource( 6 )
+hint_tooltip = "Ultra Turret - Way faster but less accurate!
+Price: $20"
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_disabled = Color( 0.564706, 0.564706, 0.564706, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 0.564706, 1 )
@@ -240,13 +244,15 @@ price = 20.0
 turretName = "Ultra Turret"
 targetTier = 2
 turretScene = ExtResource( 5 )
+mouseCursor = ExtResource( 8 )
 
 [node name="Button_3" type="Button" parent="Buttons/HBoxContainer"]
-margin_left = 322.0
-margin_right = 409.0
+margin_left = 316.0
+margin_right = 393.0
 margin_bottom = 58.0
-hint_tooltip = "One Shot Turret - Extremely accurate and one shots any enemy, but has a long cooldown"
-custom_fonts/font = ExtResource( 6 )
+hint_tooltip = "One Shot Turret - Extremely accurate and one shots any enemy, but has a long cooldown
+Price: $50"
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color_disabled = Color( 0.564706, 0.564706, 0.564706, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 0.564706, 1 )
@@ -261,13 +267,7 @@ price = 50.0
 turretName = "One Shot Turret"
 targetTier = 3
 turretScene = ExtResource( 5 )
-
-[node name="595FAD8C-E33F-4E12-A974-9B2D043A2BA3pngeac9bd8cac80378692e4115553790af8" type="Sprite" parent="."]
-visible = false
-modulate = Color( 1, 1, 1, 0.705882 )
-position = Vector2( 512, 297.5 )
-scale = Vector2( 0.266667, 0.279167 )
-texture = ExtResource( 2 )
+mouseCursor = ExtResource( 9 )
 
 [node name="CRT" type="ColorRect" parent="."]
 material = SubResource( 3 )
@@ -276,3 +276,20 @@ margin_bottom = 599.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GameOver" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 935.5
+margin_top = 32.0
+margin_right = 1001.5
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 7 )
+text = "Score: x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreTimer" type="Timer" parent="."]
+autostart = true
