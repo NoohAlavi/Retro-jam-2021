@@ -33,6 +33,11 @@ public class UI : Control
             GetNode<ColorRect>("CRT").Visible = !GetNode<ColorRect>("CRT").Visible;
         }
 
+        if (Input.IsActionJustPressed("Reset"))
+        {
+            GetTree().ReloadCurrentScene();
+        }
+
         if (health <= 0f)
         {
             GetNode<Control>("GameOver").Show();
