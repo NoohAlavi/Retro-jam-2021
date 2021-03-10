@@ -28,7 +28,10 @@ public class Enemy : PathFollow2D
             QueueFree();
         }
 
-
+        if (health == 4)
+        {
+            anim.Animation = "pink";
+        }
         if (health == 3)
         {
             anim.Animation = "green";
@@ -45,5 +48,10 @@ public class Enemy : PathFollow2D
         {
             QueueFree();
         }
+    }
+
+    public void Split()
+    {
+        
     }
 }

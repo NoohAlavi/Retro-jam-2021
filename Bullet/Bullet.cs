@@ -32,14 +32,18 @@ public class Bullet : Area2D
     {
         if (area.GetParent() is Enemy)
         {
+
+            Enemy hit = area.GetParent<Enemy>();
+            if (hit.health == 4)
+            {
+                hit.Split();
+                QueueFree();
+                return;
+            }
+
             area.GetParent<Enemy>().health -= damage;
-            GetTree().Root.GetNode<UI>("World/UILayer/UI").money++;
-            
-            // if (GD.Randf() >= 0.95)
-            // {
-            //     shooter.QueueFree();
-            // }
-            
+            GetTree().Root.GetNode<UI>("World/UILayer/UI").money++; 
+
             QueueFree();
         }
     }
