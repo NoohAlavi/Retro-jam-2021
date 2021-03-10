@@ -11,7 +11,7 @@ public class MainMenu : Control
 
     private void Play()
     {
-        GetTree().ChangeScene("res://World/World.tscn");
+        GetTree().ChangeScene("res://Tutorial/Tutorial1.tscn");
     }
 
     private void Credits()
