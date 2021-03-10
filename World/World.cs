@@ -43,6 +43,7 @@ public class World : Node2D
             e.speed = Mathf.Round(GD.Randf() * 3f + 1f);
             GetNode<Path2D>("Path2D").AddChild(e);
             e.Offset = pos;
+            e.GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
         }
     }
 }
