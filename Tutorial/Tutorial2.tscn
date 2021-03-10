@@ -1,0 +1,221 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://UI/minecraft/Minecraft.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/minecraft/minecraft.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/3dventure/3dventure.tres" type="DynamicFont" id=3]
+[ext_resource path="res://UI/CRT.shader" type="Shader" id=4]
+[ext_resource path="res://Enemy/Sprites/Enemy_0.png" type="Texture" id=5]
+[ext_resource path="res://Enemy/Sprites/Enemy_1.png" type="Texture" id=6]
+[ext_resource path="res://Enemy/Sprites/Enemy_2.png" type="Texture" id=7]
+[ext_resource path="res://Tutorial/Tutorial.cs" type="Script" id=8]
+[ext_resource path="res://Enemy/Sprites/Enemy_0 blue.png" type="Texture" id=9]
+[ext_resource path="res://Enemy/Sprites/Enemy_1 blue.png" type="Texture" id=10]
+[ext_resource path="res://Enemy/Sprites/Enemy_2 blue.png" type="Texture" id=11]
+[ext_resource path="res://Enemy/Sprites/Enemy_0 green.png" type="Texture" id=12]
+[ext_resource path="res://Enemy/Sprites/Enemy_0 pink.png" type="Texture" id=13]
+[ext_resource path="res://Enemy/Sprites/Enemy_1 pink.png" type="Texture" id=14]
+[ext_resource path="res://Enemy/Sprites/Enemy_2 pink.png" type="Texture" id=15]
+[ext_resource path="res://Enemy/Sprites/Enemy_1 green.png" type="Texture" id=16]
+[ext_resource path="res://Enemy/Sprites/Enemy_2 green.png" type="Texture" id=17]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/screen_size = Vector2( 320, 180 )
+shader_param/show_curvature = true
+shader_param/curvature_x_amount = 6.0
+shader_param/curvature_y_amount = 4.0
+shader_param/corner_color = Color( 0, 0, 0, 1 )
+shader_param/show_vignette = true
+shader_param/vignette_opacity = 0.2
+shader_param/show_horizontal_scan_lines = true
+shader_param/horizontal_scan_lines_amount = 180.0
+shader_param/horizontal_scan_lines_opacity = 1.0
+shader_param/show_vertical_scan_lines = false
+shader_param/vertical_scan_lines_amount = 320.0
+shader_param/vertical_scan_lines_opacity = 1.0
+shader_param/boost = 1.2
+shader_param/aberration_amount = 0.0
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Tutorial1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+nextScene = "res://World/World.tscn"
+backScene = "res://Tutorial/Tutorial1.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.262745, 0.262745, 0.262745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CRT" type="ColorRect" parent="."]
+material = SubResource( 1 )
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tutorial" type="Label" parent="."]
+margin_left = 208.0
+margin_right = 1232.0
+margin_bottom = 600.0
+rect_scale = Vector2( 5, 5 )
+custom_fonts/font = ExtResource( 3 )
+text = "How to Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 28.0
+margin_top = 504.0
+margin_right = 98.0
+margin_bottom = 526.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_hover = Color( 0.411765, 1, 0.462745, 1 )
+custom_colors/font_color_pressed = Color( 0.964706, 0.870588, 0.109804, 1 )
+text = "<- Back"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="q" type="Button" parent="."]
+margin_left = 688.0
+margin_top = 492.0
+margin_right = 758.0
+margin_bottom = 514.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_hover = Color( 0.411765, 1, 0.462745, 1 )
+custom_colors/font_color_pressed = Color( 0.964706, 0.870588, 0.109804, 1 )
+text = "Next ->"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemy_Red" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 264 )
+scale = Vector2( 10, 10 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="Enemy_B" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 160 )
+scale = Vector2( 10, 10 )
+frames = SubResource( 4 )
+playing = true
+
+[node name="Enemy_G" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 360 )
+scale = Vector2( 10, 10 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="Enemy_P" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 456 )
+scale = Vector2( 10, 10 )
+frames = SubResource( 6 )
+frame = 1
+playing = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 80.0
+margin_right = 333.0
+margin_bottom = 94.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = ExtResource( 2 )
+text = "The turrets will automatically shoot the enemies. Killing enemies gets you coins."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Label"]
+margin_left = 85.3333
+margin_top = 42.6667
+margin_right = 125.333
+margin_bottom = 56.6667
+custom_fonts/font = ExtResource( 2 )
+text = "The Blue  Enemy has one health, but is also the fastest."
+
+[node name="Label2" type="Label" parent="Label"]
+margin_left = 82.6666
+margin_top = 101.333
+margin_right = 649.667
+margin_bottom = 136.333
+custom_fonts/font = ExtResource( 2 )
+text = "The Red Enemy has two health, and has a medium speed. Turns into Blue 
+Enemy upon death."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Label"]
+margin_left = 82.6666
+margin_top = 176.0
+margin_right = 624.667
+margin_bottom = 211.0
+custom_fonts/font = ExtResource( 2 )
+text = "The Green Enemy has three health, but is the slowest. Turns into red
+Enemy upon death."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Label"]
+margin_left = 82.6666
+margin_top = 229.333
+margin_right = 624.667
+margin_bottom = 264.333
+custom_fonts/font = ExtResource( 2 )
+text = "The Pink Enemy has one health, and a medium speed. It splits into three
+to five green enemies upon death."
+__meta__ = {
+"_edit_use_anchors_": false
+}

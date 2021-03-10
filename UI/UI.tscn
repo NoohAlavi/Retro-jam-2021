@@ -153,6 +153,7 @@ __meta__ = {
 }
 
 [node name="f2b28f6e82f8cc3" type="Sprite" parent="ColorRect"]
+visible = false
 position = Vector2( 512, 44.5 )
 scale = Vector2( 0.842105, 0.071546 )
 texture = ExtResource( 10 )
