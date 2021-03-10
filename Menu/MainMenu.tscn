@@ -68,7 +68,7 @@ margin_right = 256.0
 margin_bottom = 80.0
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 3 )
-text = "TOWER DEFENDERS"
+text = "TURRET MANIA"
 align = 1
 valign = 1
 __meta__ = {
@@ -76,14 +76,14 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = -56.0
-margin_top = 528.0
-margin_right = 448.0
-margin_bottom = 563.0
+margin_left = 8.0
+margin_top = 520.0
+margin_right = 512.0
+margin_bottom = 555.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 3 )
-text = "Made by Nooh And Nash for the Retro Game Jam 2021"
-align = 1
+text = "Made by Nooh And Nash in under a week for the 
+Retro Game Jam 2021"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false

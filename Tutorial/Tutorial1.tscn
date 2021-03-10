@@ -128,19 +128,20 @@ __meta__ = {
 position = Vector2( 72, 160 )
 scale = Vector2( 12, 12 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Turret_1" type="AnimatedSprite" parent="."]
 position = Vector2( 76, 300 )
 scale = Vector2( 12, 12 )
 frames = SubResource( 4 )
-frame = 1
 playing = true
 
 [node name="Turret_2" type="AnimatedSprite" parent="."]
 position = Vector2( 76, 444 )
 scale = Vector2( 12, 12 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]

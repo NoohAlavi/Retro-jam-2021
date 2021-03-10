@@ -8,12 +8,16 @@ public class UI : Control
     [Export]
     public float money = 15; 
     [Export]
-    public float health = 500f;
+    public float maxHp = 750f;
     [Export]
     public int score = 0;
 
+    public float health;
+
     public override void _Ready()
     {
+
+        health = maxHp;
 
         coinLabel = GetNode<Label>("CoinsLabel");
         hpLabel = GetNode<Label>("HealthLabel");
@@ -25,7 +29,7 @@ public class UI : Control
     public override void _Process(float delta)
     {
         coinLabel.Text = "Coins: $" + money;
-        hpLabel.Text = "Health: " + (health / 500f) * 100f  + "%";
+        hpLabel.Text = "Health: " + (health / maxHp) * 100f  + "%";
         scoreLabel.Text = "Score: " + score;
 
         if (Input.IsActionJustPressed("ToggleCRT"))
