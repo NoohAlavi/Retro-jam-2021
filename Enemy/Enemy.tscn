@@ -51,8 +51,8 @@ endParticlesScn = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
-animation = "pink"
-frame = 1
+animation = "red"
+frame = 2
 speed_scale = 0.5
 playing = true
 

@@ -36,7 +36,8 @@ public class Bullet : Area2D
             Enemy hit = area.GetParent<Enemy>();
             if (hit.health == 4)
             {
-                hit.Split();
+                GetTree().Root.GetNode<World>("World").Split(hit.Offset);
+                hit.QueueFree();
                 QueueFree();
                 return;
             }

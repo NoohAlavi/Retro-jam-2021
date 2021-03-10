@@ -49,9 +49,4 @@ public class Enemy : PathFollow2D
             QueueFree();
         }
     }
-
-    public void Split()
-    {
-        
-    }
 }

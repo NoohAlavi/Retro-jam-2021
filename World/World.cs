@@ -33,4 +33,16 @@ public class World : Node2D
         enemy.speed = Mathf.Round(GD.Randf() * 3f + 1f);
         GetNode<Path2D>("Path2D").AddChild(enemy);
     }
+
+    public void Split(float pos)
+    {
+        for (int i = 0; i < GD.RandRange(3, 5); i++)
+        {
+            Enemy e = (Enemy) enemyScene.Instance();
+            e.health = 3;
+            e.speed = Mathf.Round(GD.Randf() * 3f + 1f);
+            GetNode<Path2D>("Path2D").AddChild(e);
+            e.Offset = pos;
+        }
+    }
 }
