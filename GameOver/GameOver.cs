@@ -10,6 +10,6 @@ public class GameOver : Control
 
     private void Retry()
     {
-        GetTree().ReloadCurrentScene();
+        GetTree().ChangeScene("res://Menu/MainMenu.tscn");
     }
 }

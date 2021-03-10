@@ -132,7 +132,7 @@ rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_hover = Color( 0.411765, 1, 0.462745, 1 )
 custom_colors/font_color_pressed = Color( 0.964706, 0.870588, 0.109804, 1 )
-text = "Next ->"
+text = "Play ->"
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -142,7 +142,6 @@ __meta__ = {
 position = Vector2( 72, 264 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="Enemy_B" type="AnimatedSprite" parent="."]
@@ -161,26 +160,26 @@ playing = true
 position = Vector2( 72, 456 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]
 margin_left = 16.0
-margin_top = 80.0
-margin_right = 333.0
-margin_bottom = 94.0
+margin_top = 64.0
+margin_right = 684.0
+margin_bottom = 99.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = ExtResource( 2 )
-text = "The turrets will automatically shoot the enemies. Killing enemies gets you coins."
+text = "The turrets will automatically shoot the enemies. Killing enemies gets you coins. When an
+enemy gets hit, its speed is also randomized.q"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Label"]
-margin_left = 85.3333
-margin_top = 42.6667
-margin_right = 125.333
-margin_bottom = 56.6667
+margin_left = 82.6667
+margin_top = 53.3333
+margin_right = 331.667
+margin_bottom = 69.3333
 custom_fonts/font = ExtResource( 2 )
 text = "The Blue  Enemy has one health."
 __meta__ = {
@@ -188,10 +187,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="Label"]
-margin_left = 82.6666
-margin_top = 101.333
-margin_right = 649.667
-margin_bottom = 136.333
+margin_left = 80.0
+margin_top = 112.0
+margin_right = 647.0
+margin_bottom = 147.0
 custom_fonts/font = ExtResource( 2 )
 text = "The Red Enemy has two health.Turns into Blue Enemy upon death."
 __meta__ = {
@@ -199,10 +198,10 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="Label"]
-margin_left = 82.6666
-margin_top = 176.0
-margin_right = 624.667
-margin_bottom = 211.0
+margin_left = 80.0
+margin_top = 186.667
+margin_right = 626.0
+margin_bottom = 221.667
 custom_fonts/font = ExtResource( 2 )
 text = "The Green Enemy has three health. Turns into Red Enemy upon death."
 __meta__ = {
@@ -210,13 +209,13 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="Label"]
-margin_left = 82.6666
-margin_top = 229.333
-margin_right = 633.667
-margin_bottom = 264.333
+margin_left = 80.0
+margin_top = 240.0
+margin_right = 659.0
+margin_bottom = 275.0
 custom_fonts/font = ExtResource( 2 )
-text = "The Pink Enemy has one health. It splits into three
-to five green enemies upon death."
+text = "The Pink Enemy has one health. Splits into one to five Green Enemies upon
+death."
 __meta__ = {
 "_edit_use_anchors_": false
 }

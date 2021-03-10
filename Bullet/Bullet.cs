@@ -42,7 +42,8 @@ public class Bullet : Area2D
                 return;
             }
 
-            area.GetParent<Enemy>().health -= damage;
+            hit.health -= damage;
+            hit.speed = Mathf.Round(GD.Randf() * 3f + 1f);
             GetTree().Root.GetNode<UI>("World/UILayer/UI").money++; 
 
             QueueFree();
