@@ -142,26 +142,28 @@ __meta__ = {
 position = Vector2( 72, 264 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Enemy_B" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 160 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 4 )
+frame = 2
 playing = true
 
 [node name="Enemy_G" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 360 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 5 )
+frame = 2
 playing = true
 
 [node name="Enemy_P" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 456 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 6 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Label" type="Label" parent="."]
@@ -182,7 +184,10 @@ margin_top = 42.6667
 margin_right = 125.333
 margin_bottom = 56.6667
 custom_fonts/font = ExtResource( 2 )
-text = "The Blue  Enemy has one health, but is also the fastest."
+text = "The Blue  Enemy has one health."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label2" type="Label" parent="Label"]
 margin_left = 82.6666
@@ -190,8 +195,7 @@ margin_top = 101.333
 margin_right = 649.667
 margin_bottom = 136.333
 custom_fonts/font = ExtResource( 2 )
-text = "The Red Enemy has two health, and has a medium speed. Turns into Blue 
-Enemy upon death."
+text = "The Red Enemy has two health.Turns into Blue Enemy upon death."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -202,8 +206,7 @@ margin_top = 176.0
 margin_right = 624.667
 margin_bottom = 211.0
 custom_fonts/font = ExtResource( 2 )
-text = "The Green Enemy has three health, but is the slowest. Turns into red
-Enemy upon death."
+text = "The Green Enemy has three health. Turns into Red Enemy upon death."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -211,10 +214,10 @@ __meta__ = {
 [node name="Label4" type="Label" parent="Label"]
 margin_left = 82.6666
 margin_top = 229.333
-margin_right = 624.667
+margin_right = 633.667
 margin_bottom = 264.333
 custom_fonts/font = ExtResource( 2 )
-text = "The Pink Enemy has one health, and a medium speed. It splits into three
+text = "The Pink Enemy has one health. It splits into three
 to five green enemies upon death."
 __meta__ = {
 "_edit_use_anchors_": false
