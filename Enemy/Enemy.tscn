@@ -53,6 +53,7 @@ endParticlesScn = ExtResource( 5 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 1 )
 animation = "red"
+frame = 2
 speed_scale = 0.5
 playing = true
 

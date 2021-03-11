@@ -29,7 +29,7 @@ public class UI : Control
     public override void _Process(float delta)
     {
         coinLabel.Text = "Coins: $" + money;
-        hpLabel.Text = "Health: " + (health / maxHp) * 100f  + "%";
+        hpLabel.Text = "Health: " + Mathf.Round((health / maxHp) * 100f)  + "%";
         scoreLabel.Text = "Score: " + score;
 
         if (Input.IsActionJustPressed("ToggleCRT"))
