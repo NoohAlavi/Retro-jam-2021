@@ -12,6 +12,7 @@ public class UI : Control
     [Export]
     public int score = 0;
 
+    [Export]
     public float health;
 
     public override void _Ready()
@@ -44,7 +45,8 @@ public class UI : Control
 
         if (health <= 0f)
         {
-            GetNode<Control>("GameOver").Show();
+            GetNode<GameOver>("GameOver").Show();
+            GetNode<GameOver>("GameOver").StartGameOver();
             GetNode<HBoxContainer>("Buttons/HBoxContainer").Hide();
         }
     }
