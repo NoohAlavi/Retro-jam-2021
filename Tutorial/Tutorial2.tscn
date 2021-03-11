@@ -142,28 +142,28 @@ __meta__ = {
 position = Vector2( 72, 264 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Enemy_B" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 160 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 4 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Enemy_G" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 360 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Enemy_P" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 456 )
 scale = Vector2( 10, 10 )
 frames = SubResource( 6 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Label" type="Label" parent="."]
@@ -173,7 +173,7 @@ margin_right = 684.0
 margin_bottom = 99.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = ExtResource( 2 )
-text = "The turrets will automatically shoot the enemies. Killing enemies gets you coins. When an
+text = "The turrets will automatically shoot the blobs. Killing blobs gets you coins. When an
 enemy gets hit, its speed is also randomized."
 __meta__ = {
 "_edit_use_anchors_": false
@@ -185,7 +185,7 @@ margin_top = 53.3333
 margin_right = 331.667
 margin_bottom = 69.3333
 custom_fonts/font = ExtResource( 2 )
-text = "The Blue  Enemy has one health."
+text = "The Blue Blob has one health."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -196,7 +196,7 @@ margin_top = 112.0
 margin_right = 647.0
 margin_bottom = 147.0
 custom_fonts/font = ExtResource( 2 )
-text = "The Red Enemy has two health.Turns into Blue Enemy upon death."
+text = "The Red Blob has two health.Turns into Blue Blob upon death."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -207,7 +207,7 @@ margin_top = 186.667
 margin_right = 626.0
 margin_bottom = 221.667
 custom_fonts/font = ExtResource( 2 )
-text = "The Green Enemy has three health. Turns into Red Enemy upon death."
+text = "The Green Blob has three health. Turns into Red Blob upon death."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -218,7 +218,7 @@ margin_top = 240.0
 margin_right = 659.0
 margin_bottom = 275.0
 custom_fonts/font = ExtResource( 2 )
-text = "The Pink Enemy has one health. Splits into one to five Green Enemies upon
+text = "The Pink Blob has one health. Splits into one to five Green Blobs upon
 death."
 __meta__ = {
 "_edit_use_anchors_": false

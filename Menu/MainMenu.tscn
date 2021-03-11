@@ -50,10 +50,10 @@ __meta__ = {
 position = Vector2( 512, 304 )
 scale = Vector2( 32, 32.8889 )
 frames = SubResource( 1 )
-frame = 8
+frame = 2
 playing = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="CRT" type="ColorRect" parent="."]
 material = SubResource( 2 )
 margin_right = 1024.0
 margin_bottom = 600.0
@@ -63,12 +63,12 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_top = 64.0
+margin_top = 65.6818
 margin_right = 256.0
-margin_bottom = 80.0
+margin_bottom = 81.6818
 rect_scale = Vector2( 4, 4 )
 custom_fonts/font = SubResource( 3 )
-text = "TURRET MANIA"
+text = "BLOBS & BULLETS"
 align = 1
 valign = 1
 __meta__ = {
