@@ -66,6 +66,7 @@ public class BuyTurret: Button
 		Node turretsHolder = GetTree().Root.GetNode("World/Turrets");
 		var turrets = turretsHolder.GetChildren();
 		if (pos.y > 500f) return;
+		if (uI.msInPath) return;
 		for (int i = 0; i < turrets.Count; i++)
 		{
 			if (pos.DistanceTo((turrets[i] as Turret).Position) < 100) 

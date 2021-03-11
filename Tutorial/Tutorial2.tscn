@@ -153,35 +153,30 @@ __meta__ = {
 position = Vector2( 72, 160 )
 scale = Vector2( 8, 8 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="Enemy_Red" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 232 )
 scale = Vector2( 8, 8 )
 frames = SubResource( 4 )
-frame = 1
 playing = true
 
 [node name="Enemy_G" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 304 )
 scale = Vector2( 8, 8 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
 
 [node name="Enemy_P" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 376 )
 scale = Vector2( 8, 8 )
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="Enemy_S" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 456 )
 scale = Vector2( 8, 8 )
 frames = SubResource( 7 )
-frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]

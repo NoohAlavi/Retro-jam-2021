@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="MousePath" type="Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 16, 48 )
+build_mode = 1
+polygon = PoolVector2Array( 80, -8, 272, -16, 464, 0, 728, 0, 904, 24, 936, 56, 944, 112, 832, 200, 240, 200, 112, 328, 144, 360, 456, 368, 736, 392, 992, 424, 992, 448, 664, 456, 480, 432, 120, 432, 48, 360, 48, 312, 176, 168, 272, 152, 808, 144, 880, 104, 808, 88, 808, 56, -8, 56, 0, -8, 72, -8 )

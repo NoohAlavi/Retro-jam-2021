@@ -15,6 +15,8 @@ public class UI : Control
     [Export]
     public float health;
 
+    public bool msInPath = false;
+
     public override void _Ready()
     {
 
@@ -23,6 +25,9 @@ public class UI : Control
         coinLabel = GetNode<Label>("CoinsLabel");
         hpLabel = GetNode<Label>("HealthLabel");
         scoreLabel = GetNode<Label>("ScoreLabel");
+
+        GetNode<Area2D>("MousePath").Connect("mouse_entered", this, "MsEntered");
+        GetNode<Area2D>("MousePath").Connect("mouse_exited", this, "MsExited");
 
         GetNode<Timer>("ScoreTimer").Connect("timeout", this, "AddScore");
     }
@@ -59,6 +64,18 @@ public class UI : Control
         {
             money++;
         }
+    }
+
+    private void MsEntered()
+    {
+        msInPath = true;
+        GD.Print("MS IN");
+    }  
+
+    private void MsExited()
+    {
+        msInPath = false;
+        GD.Print("MS Out");
     }
 }
 
