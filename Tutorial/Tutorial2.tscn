@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://UI/minecraft/Minecraft.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/minecraft/minecraft.tres" type="DynamicFont" id=2]
@@ -17,6 +17,9 @@
 [ext_resource path="res://Enemy/Sprites/Enemy_2 pink.png" type="Texture" id=15]
 [ext_resource path="res://Enemy/Sprites/Enemy_1 green.png" type="Texture" id=16]
 [ext_resource path="res://Enemy/Sprites/Enemy_2 green.png" type="Texture" id=17]
+[ext_resource path="res://Enemy/Sprites/Enemy_0 sploder.png" type="Texture" id=18]
+[ext_resource path="res://Enemy/Sprites/Enemy_1 sploder.png" type="Texture" id=19]
+[ext_resource path="res://Enemy/Sprites/Enemy_2 sploder.png" type="Texture" id=20]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 4 )
@@ -39,17 +42,17 @@ shader_param/aberration_amount = 0.0
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 1 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -66,6 +69,14 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -138,39 +149,46 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Enemy_Red" type="AnimatedSprite" parent="."]
-position = Vector2( 72, 264 )
-scale = Vector2( 10, 10 )
-frames = SubResource( 3 )
-frame = 2
-playing = true
-
 [node name="Enemy_B" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 160 )
-scale = Vector2( 10, 10 )
+scale = Vector2( 8, 8 )
 frames = SubResource( 4 )
-frame = 2
+frame = 1
+playing = true
+
+[node name="Enemy_Red" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 232 )
+scale = Vector2( 8, 8 )
+frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Enemy_G" type="AnimatedSprite" parent="."]
-position = Vector2( 72, 360 )
-scale = Vector2( 10, 10 )
+position = Vector2( 72, 304 )
+scale = Vector2( 8, 8 )
 frames = SubResource( 5 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Enemy_P" type="AnimatedSprite" parent="."]
-position = Vector2( 72, 456 )
-scale = Vector2( 10, 10 )
+position = Vector2( 72, 376 )
+scale = Vector2( 8, 8 )
 frames = SubResource( 6 )
-frame = 2
+frame = 1
+playing = true
+
+[node name="Enemy_S" type="AnimatedSprite" parent="."]
+position = Vector2( 72, 456 )
+scale = Vector2( 8, 8 )
+frames = SubResource( 7 )
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]
 margin_left = 16.0
-margin_top = 64.0
+margin_top = 72.0
 margin_right = 684.0
-margin_bottom = 99.0
+margin_bottom = 107.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = ExtResource( 2 )
 text = "The turrets will automatically shoot the blobs. Killing blobs gets you coins. When an
@@ -191,10 +209,10 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="Label"]
-margin_left = 80.0
-margin_top = 112.0
-margin_right = 647.0
-margin_bottom = 147.0
+margin_left = 69.3333
+margin_top = 90.6667
+margin_right = 636.333
+margin_bottom = 125.667
 custom_fonts/font = ExtResource( 2 )
 text = "The Red Blob has two health.Turns into Blue Blob upon death."
 __meta__ = {
@@ -202,10 +220,10 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="Label"]
-margin_left = 80.0
-margin_top = 186.667
-margin_right = 626.0
-margin_bottom = 221.667
+margin_left = 69.3333
+margin_top = 138.667
+margin_right = 615.333
+margin_bottom = 173.667
 custom_fonts/font = ExtResource( 2 )
 text = "The Green Blob has three health. Turns into Red Blob upon death."
 __meta__ = {
@@ -213,12 +231,24 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="Label"]
-margin_left = 80.0
-margin_top = 240.0
-margin_right = 659.0
-margin_bottom = 275.0
+margin_left = 69.3333
+margin_top = 186.667
+margin_right = 648.333
+margin_bottom = 221.667
 custom_fonts/font = ExtResource( 2 )
 text = "The Pink Blob has one health. Splits into one to five Green Blobs upon
+death."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Label"]
+margin_left = 64.0
+margin_top = 240.0
+margin_right = 643.0
+margin_bottom = 275.0
+custom_fonts/font = ExtResource( 2 )
+text = "The Sploder Blob has one health. Destroys the turret that killed it upon
 death."
 __meta__ = {
 "_edit_use_anchors_": false

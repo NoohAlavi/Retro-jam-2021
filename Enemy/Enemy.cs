@@ -8,11 +8,21 @@ public class Enemy : PathFollow2D
     public int health = 2;
     [Export] public PackedScene endParticlesScn;
 
-    private AnimatedSprite anim;
+    public AnimatedSprite anim;
 
     public override void _Ready()
     {
         anim = GetNode<AnimatedSprite>("AnimatedSprite");
+        if (health == 4)
+        {
+            if (GD.Randf() >= 0.5)
+            {
+                anim.Animation = "pink";
+            } else
+            {
+                anim.Animation = "sploder";
+            }
+        }
     }
 
     public override void _PhysicsProcess(float delta)
@@ -28,10 +38,6 @@ public class Enemy : PathFollow2D
             QueueFree();
         }
 
-        if (health == 4)
-        {
-            anim.Animation = "pink";
-        }
         if (health == 3)
         {
             anim.Animation = "green";

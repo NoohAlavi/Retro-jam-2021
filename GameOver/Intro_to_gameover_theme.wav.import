@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Intro_to_gameover_theme.wav-361cdaaa55f83e4aed334b222ab29682.sample"
+
+[deps]
+
+source_file="res://GameOver/Intro_to_gameover_theme.wav"
+dest_files=[ "res://.import/Intro_to_gameover_theme.wav-361cdaaa55f83e4aed334b222ab29682.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

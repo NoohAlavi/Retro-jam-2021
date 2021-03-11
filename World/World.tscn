@@ -70,7 +70,7 @@ position = Vector2( 31.298, 72.3079 )
 
 [node name="Bullets" type="Node2D" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = -30.0
 autoplay = true
