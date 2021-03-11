@@ -42,7 +42,7 @@ shader_param/aberration_amount = 0.0
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 1 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
@@ -50,7 +50,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
@@ -152,14 +152,14 @@ __meta__ = {
 [node name="Enemy_B" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 160 )
 scale = Vector2( 8, 8 )
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 frame = 1
 playing = true
 
 [node name="Enemy_Red" type="AnimatedSprite" parent="."]
 position = Vector2( 72, 232 )
 scale = Vector2( 8, 8 )
-frames = SubResource( 3 )
+frames = SubResource( 4 )
 frame = 1
 playing = true
 
@@ -191,8 +191,8 @@ margin_right = 684.0
 margin_bottom = 107.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = ExtResource( 2 )
-text = "The turrets will automatically shoot the blobs. Killing blobs gets you coins. When an
-enemy gets hit, its speed is also randomized."
+text = "The turrets will automatically shoot the blobs. Killing blobs gets you coins.
+When a blob gets hit, its  speed is also randomized."
 __meta__ = {
 "_edit_use_anchors_": false
 }

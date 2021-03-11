@@ -29,7 +29,7 @@ public class UI : Control
 
     public override void _Process(float delta)
     {
-        coinLabel.Text = "Coins: $" + money;
+        coinLabel.Text = "Coins: $" + Mathf.Round(money);
         hpLabel.Text = "Health: " + Mathf.Round((health / maxHp) * 100f)  + "%";
         scoreLabel.Text = "Score: " + score;
 
@@ -55,6 +55,10 @@ public class UI : Control
     {
         if (health > 0f)
         score++;
+        if (score % 5 == 0)
+        {
+            money++;
+        }
     }
 }
 
